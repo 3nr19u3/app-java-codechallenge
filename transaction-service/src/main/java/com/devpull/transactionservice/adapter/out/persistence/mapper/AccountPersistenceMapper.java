@@ -10,13 +10,10 @@ public final class AccountPersistenceMapper {
     private AccountPersistenceMapper() {}
 
     public static AccountEntity toEntity(Account domain) {
-        return new AccountEntity(
-                domain.getId(),
-                domain.getAccountStatus(),
-                domain.getAccountType(),
-                domain.getCreatedAt(),
-                Instant.now() // updated_at
-        );
+        return AccountEntity.newAccount(domain.getId(),
+                                        domain.getAccountStatus(),
+                                        domain.getAccountType(),
+                                        Instant.now());
     }
 
     public static Account toDomain(AccountEntity entity) {

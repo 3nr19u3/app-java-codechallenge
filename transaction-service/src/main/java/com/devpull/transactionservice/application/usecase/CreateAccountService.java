@@ -32,8 +32,8 @@ public class CreateAccountService implements CreateAccountUseCase {
             return Mono.error(new BadRequestException("accountType is required"));
         }
 
-        // Domain object creation
-        Account account = Account.createNew(command.accountStatus(), command.accountType());
+            // Domain object creation
+            Account account = Account.createNew(command.accountStatus(), command.accountType());
 
         // Persistence and mapping to result
         return accountRepositoryPort.save(account)
