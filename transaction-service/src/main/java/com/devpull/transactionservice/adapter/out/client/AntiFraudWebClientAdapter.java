@@ -1,5 +1,7 @@
 package com.devpull.transactionservice.adapter.out.client;
 
+import com.devpull.transactionservice.adapter.out.client.dto.TransactionCreatedEvent;
+import com.devpull.transactionservice.adapter.out.client.mapper.AntiFraudEventMapper;
 import com.devpull.transactionservice.application.port.out.AntiFraudPort;
 import com.devpull.transactionservice.domain.model.Transaction;
 import org.springframework.stereotype.Component;
@@ -17,9 +19,11 @@ public class AntiFraudWebClientAdapter implements AntiFraudPort {
 
     @Override
     public Mono<String> send(Transaction tx) {
+        TransactionCreatedEvent event = AntiFraudEventMapper.toCreatedEvent(tx);
+
         return webClient.post()
-                .uri("http://localhost:8081/api/antifraud")
-                .bodyValue(tx)
+                .uri("http://localhost:8081/api/v1/antifraud")
+                .bodyValue(event)
                 .retrieve()
                 .bodyToMono(String.class);
     }

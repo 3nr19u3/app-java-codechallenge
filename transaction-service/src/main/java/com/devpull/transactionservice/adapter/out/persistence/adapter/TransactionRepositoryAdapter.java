@@ -20,9 +20,16 @@ public class TransactionRepositoryAdapter implements TransactionRepositoryPort {
 
     @Override
     public Mono<Transaction> save(Transaction tx) {
-        return repository.save(TransactionPersistenceMapper.toEntity(tx))
+        return repository.save(TransactionPersistenceMapper.toNewEntity(tx))
                 .map(TransactionPersistenceMapper::toDomain);
     }
+
+    @Override
+    public Mono<Transaction> update(Transaction tx) {
+        return repository.save(TransactionPersistenceMapper.toExistingEntity(tx))
+                .map(TransactionPersistenceMapper::toDomain);
+    }
+
 
     @Override
     public Mono<Transaction> findById(UUID id) {

@@ -3,19 +3,31 @@ package com.devpull.transactionservice.adapter.out.persistence.mapper;
 import com.devpull.transactionservice.adapter.out.persistence.entity.TransactionEntity;
 import com.devpull.transactionservice.domain.model.Transaction;
 
+import java.time.Instant;
+
 public final class TransactionPersistenceMapper {
 
     private TransactionPersistenceMapper() {}
 
-    public static TransactionEntity toEntity(Transaction domain) {
+    public static TransactionEntity toNewEntity(Transaction domain) {
+        return TransactionEntity.newTransaction(domain.getId(),
+                                                domain.getStatus(),
+                                                domain.getType(),
+                                                domain.getAmount(),
+                                                domain.getAccountId(),
+                                                Instant.now());
+    }
+
+    public static TransactionEntity toExistingEntity(Transaction tx) {
         return new TransactionEntity(
-                domain.getId(),
-                domain.getStatus(),
-                domain.getType(),
-                domain.getAmount(),
-                domain.getCreatedAt(),
-                domain.getUpdatedAt(),
-                domain.getAccountId()
+                tx.getId(),
+                tx.getStatus(),
+                tx.getType(),
+                tx.getAmount(),
+                tx.getCreatedAt(),
+                tx.getUpdatedAt(),
+                tx.getAccountId(),
+                false
         );
     }
 

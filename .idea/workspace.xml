@@ -5,69 +5,36 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a9de01a3-8545-4816-be99-afdf018326de" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/antifraud-service/src/main/java/com/devpull/antifraudservice/config/KafkaProducerConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/antifraud-service/src/main/java/com/devpull/antifraudservice/config/KafkaTopicConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/antifraud-service/src/main/java/com/devpull/antifraudservice/controller/AntifraudController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/antifraud-service/src/main/java/com/devpull/antifraudservice/kafka/EventProducer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/transaction-service/src/main/java/com/devpull/transactionservice/adapter/in/kafka/TransactionStatusConsumer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/transaction-service/src/main/java/com/devpull/transactionservice/adapter/in/web/AccountController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/transaction-service/src/main/java/com/devpull/transactionservice/adapter/in/web/TransactionController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/transaction-service/src/main/java/com/devpull/transactionservice/adapter/in/web/dto/AccountRequest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/transaction-service/src/main/java/com/devpull/transactionservice/adapter/in/web/dto/AccountResponse.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/transaction-service/src/main/java/com/devpull/transactionservice/adapter/in/web/dto/TransactionRequest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/transaction-service/src/main/java/com/devpull/transactionservice/adapter/in/web/dto/TransactionResponse.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/transaction-service/src/main/java/com/devpull/transactionservice/adapter/in/web/mapper/AccountWebMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/transaction-service/src/main/java/com/devpull/transactionservice/adapter/in/web/mapper/TransactionWebMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/transaction-service/src/main/java/com/devpull/transactionservice/adapter/out/client/AntiFraudWebClientAdapter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/transaction-service/src/main/java/com/devpull/transactionservice/adapter/out/client/FraudScoringWebClient.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/transaction-service/src/main/java/com/devpull/transactionservice/adapter/out/client/adapter/FraudScoringAdapter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/transaction-service/src/main/java/com/devpull/transactionservice/adapter/out/client/dto/FraudScoreRequest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/transaction-service/src/main/java/com/devpull/transactionservice/adapter/out/client/dto/FraudScoreResponse.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/transaction-service/src/main/java/com/devpull/transactionservice/adapter/out/persistence/adapter/AccountRepositoryAdapter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/transaction-service/src/main/java/com/devpull/transactionservice/adapter/out/persistence/adapter/TransactionRepositoryAdapter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/transaction-service/src/main/java/com/devpull/transactionservice/adapter/out/persistence/entity/AccountEntity.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/transaction-service/src/main/java/com/devpull/transactionservice/adapter/out/persistence/entity/TransactionEntity.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/transaction-service/src/main/java/com/devpull/transactionservice/adapter/out/persistence/mapper/AccountPersistenceMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/transaction-service/src/main/java/com/devpull/transactionservice/adapter/out/persistence/mapper/TransactionPersistenceMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/transaction-service/src/main/java/com/devpull/transactionservice/adapter/out/persistence/repository/R2dbcAccountRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/transaction-service/src/main/java/com/devpull/transactionservice/adapter/out/persistence/repository/R2dbcTransactionRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/transaction-service/src/main/java/com/devpull/transactionservice/application/dto/command/CreateAccountCommand.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/transaction-service/src/main/java/com/devpull/transactionservice/application/dto/command/CreateTransactionCommand.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/transaction-service/src/main/java/com/devpull/transactionservice/application/dto/result/AccountResult.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/transaction-service/src/main/java/com/devpull/transactionservice/application/dto/result/TransactionResult.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/transaction-service/src/main/java/com/devpull/transactionservice/application/mapper/AccountApplicationMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/transaction-service/src/main/java/com/devpull/transactionservice/application/port/in/CreateAccountUseCase.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/transaction-service/src/main/java/com/devpull/transactionservice/application/port/in/CreateTransactionUseCase.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/transaction-service/src/main/java/com/devpull/transactionservice/application/port/in/GetAccountUseCase.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/transaction-service/src/main/java/com/devpull/transactionservice/application/port/in/GetTransactionUseCase.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/transaction-service/src/main/java/com/devpull/transactionservice/application/port/in/ListTransactionsUseCase.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/transaction-service/src/main/java/com/devpull/transactionservice/application/port/in/UpdateTransactionStatusUseCase.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/transaction-service/src/main/java/com/devpull/transactionservice/application/port/out/AccountRepositoryPort.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/transaction-service/src/main/java/com/devpull/transactionservice/application/port/out/AntiFraudPort.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/transaction-service/src/main/java/com/devpull/transactionservice/application/port/out/TransactionRepositoryPort.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/transaction-service/src/main/java/com/devpull/transactionservice/application/usecase/CreateAccountService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/transaction-service/src/main/java/com/devpull/transactionservice/application/usecase/CreateTransactionService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/transaction-service/src/main/java/com/devpull/transactionservice/application/usecase/GetAccountService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/transaction-service/src/main/java/com/devpull/transactionservice/application/usecase/GetTransactionService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/transaction-service/src/main/java/com/devpull/transactionservice/application/usecase/ListTransactionsService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/transaction-service/src/main/java/com/devpull/transactionservice/application/usecase/UpdateTransactionStatusService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/transaction-service/src/main/java/com/devpull/transactionservice/domain/enums/AccountStatus.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/transaction-service/src/main/java/com/devpull/transactionservice/domain/enums/AccountType.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/transaction-service/src/main/java/com/devpull/transactionservice/domain/enums/TransactionStatus.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/transaction-service/src/main/java/com/devpull/transactionservice/domain/enums/TransactionType.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/transaction-service/src/main/java/com/devpull/transactionservice/domain/exception/APIException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/transaction-service/src/main/java/com/devpull/transactionservice/domain/exception/BadRequestException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/transaction-service/src/main/java/com/devpull/transactionservice/domain/exception/ResourceNotFoundException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/transaction-service/src/main/java/com/devpull/transactionservice/domain/model/Account.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/transaction-service/src/main/java/com/devpull/transactionservice/domain/model/Transaction.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/transaction-service/src/main/java/com/devpull/transactionservice/domain/service/FraudPolicy.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/transaction-service/src/main/java/com/devpull/transactionservice/infrastructure/config/OpenApiConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/transaction-service/src/main/java/com/devpull/transactionservice/infrastructure/config/PersistenceConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/transaction-service/src/main/java/com/devpull/transactionservice/infrastructure/config/WebClientConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/transaction-service/src/main/java/com/devpull/transactionservice/infrastructure/exception/ApiExceptionMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/transaction-service/src/main/java/com/devpull/transactionservice/infrastructure/exception/ErrorDetails.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/transaction-service/src/main/java/com/devpull/transactionservice/infrastructure/exception/GlobalExceptionHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/antifraud-service/src/main/java/com/devpull/antifraudservice/dto/TransactionCreatedEvent.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/antifraud-service/src/main/java/com/devpull/antifraudservice/dto/TransactionStatusChangedEvent.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/antifraud-service/src/main/java/com/devpull/antifraudservice/enums/TransactionStatus.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/antifraud-service/src/main/java/com/devpull/antifraudservice/service/AntifraudEvaluationService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/transaction-service/src/main/java/com/devpull/transactionservice/adapter/in/kafka/AntifraudResultListener.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/transaction-service/src/main/java/com/devpull/transactionservice/adapter/in/kafka/KafkaEnableConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/transaction-service/src/main/java/com/devpull/transactionservice/adapter/in/kafka/config/KafkaConsumerConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/transaction-service/src/main/java/com/devpull/transactionservice/adapter/in/web/dto/kafka/TransactionStatusChangedEvent.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/transaction-service/src/main/java/com/devpull/transactionservice/adapter/out/client/dto/TransactionCreatedEvent.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/transaction-service/src/main/java/com/devpull/transactionservice/adapter/out/client/mapper/AntiFraudEventMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/antifraud-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/antifraud-service/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/antifraud-service/src/main/java/com/devpull/antifraudservice/config/KafkaProducerConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/antifraud-service/src/main/java/com/devpull/antifraudservice/config/KafkaProducerConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/antifraud-service/src/main/java/com/devpull/antifraudservice/controller/AntifraudController.java" beforeDir="false" afterPath="$PROJECT_DIR$/antifraud-service/src/main/java/com/devpull/antifraudservice/controller/AntifraudController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/antifraud-service/src/main/java/com/devpull/antifraudservice/kafka/EventProducer.java" beforeDir="false" afterPath="$PROJECT_DIR$/antifraud-service/src/main/java/com/devpull/antifraudservice/kafka/EventProducer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/antifraud-service/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/antifraud-service/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/transaction-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/transaction-service/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/transaction-service/src/main/java/com/devpull/transactionservice/TransactionServiceApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/transaction-service/src/main/java/com/devpull/transactionservice/TransactionServiceApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/transaction-service/src/main/java/com/devpull/transactionservice/adapter/in/kafka/TransactionStatusConsumer.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/transaction-service/src/main/java/com/devpull/transactionservice/adapter/out/client/AntiFraudWebClientAdapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/transaction-service/src/main/java/com/devpull/transactionservice/adapter/out/client/AntiFraudWebClientAdapter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/transaction-service/src/main/java/com/devpull/transactionservice/adapter/out/persistence/adapter/TransactionRepositoryAdapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/transaction-service/src/main/java/com/devpull/transactionservice/adapter/out/persistence/adapter/TransactionRepositoryAdapter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/transaction-service/src/main/java/com/devpull/transactionservice/adapter/out/persistence/entity/AccountEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/transaction-service/src/main/java/com/devpull/transactionservice/adapter/out/persistence/entity/AccountEntity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/transaction-service/src/main/java/com/devpull/transactionservice/adapter/out/persistence/entity/TransactionEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/transaction-service/src/main/java/com/devpull/transactionservice/adapter/out/persistence/entity/TransactionEntity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/transaction-service/src/main/java/com/devpull/transactionservice/adapter/out/persistence/mapper/AccountPersistenceMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/transaction-service/src/main/java/com/devpull/transactionservice/adapter/out/persistence/mapper/AccountPersistenceMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/transaction-service/src/main/java/com/devpull/transactionservice/adapter/out/persistence/mapper/TransactionPersistenceMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/transaction-service/src/main/java/com/devpull/transactionservice/adapter/out/persistence/mapper/TransactionPersistenceMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/transaction-service/src/main/java/com/devpull/transactionservice/application/port/out/TransactionRepositoryPort.java" beforeDir="false" afterPath="$PROJECT_DIR$/transaction-service/src/main/java/com/devpull/transactionservice/application/port/out/TransactionRepositoryPort.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/transaction-service/src/main/java/com/devpull/transactionservice/application/usecase/CreateAccountService.java" beforeDir="false" afterPath="$PROJECT_DIR$/transaction-service/src/main/java/com/devpull/transactionservice/application/usecase/CreateAccountService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/transaction-service/src/main/java/com/devpull/transactionservice/application/usecase/UpdateTransactionStatusService.java" beforeDir="false" afterPath="$PROJECT_DIR$/transaction-service/src/main/java/com/devpull/transactionservice/application/usecase/UpdateTransactionStatusService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/transaction-service/src/main/java/com/devpull/transactionservice/domain/enums/TransactionStatus.java" beforeDir="false" afterPath="$PROJECT_DIR$/transaction-service/src/main/java/com/devpull/transactionservice/domain/enums/TransactionStatus.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/transaction-service/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/transaction-service/src/main/resources/application.yml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -78,6 +45,7 @@
     <persistenceIdMap>
       <entry key="_/Users/luis/IdeaProjects/app-java-codechallenge" value="38rV8ZAdxMEeBlREU0pxDXsNrXL" />
       <entry key="_/Users/luis/IdeaProjects/app-java-codechallenge/antifraud-service" value="38tsQOSh8V1vH8BZ0gjKljJFWIV" />
+      <entry key="_/Users/luis/IdeaProjects/app-java-codechallenge/transaction-service" value="390vQeUNr4GR3wrbvv1Lmc16VfW" />
     </persistenceIdMap>
   </component>
   <component name="FileTemplateManagerImpl">
@@ -85,6 +53,7 @@
       <list>
         <option value="package-info" />
         <option value="Interface" />
+        <option value="Record" />
         <option value="Class" />
       </list>
     </option>
@@ -112,26 +81,31 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ModuleVcsDetector.initialDetectionPerformed": "true",
-    "RequestMappingsPanelOrder0": "0",
-    "RequestMappingsPanelOrder1": "1",
-    "RequestMappingsPanelWidth0": "75",
-    "RequestMappingsPanelWidth1": "75",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "RunOnceActivity.typescript.service.memoryLimit.init": "true",
-    "Spring Boot.AntifraudServiceApplication.executor": "Run",
-    "Spring Boot.TransactionServiceApplication.executor": "Run",
-    "git-widget-placeholder": "feature/implements-antifraud-flux",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "/Users/luis/IdeaProjects/app-java-codechallenge",
-    "nodejs_package_manager_path": "npm",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
+    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
+    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
+    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
+    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.typescript.service.memoryLimit.init&quot;: &quot;true&quot;,
+    &quot;Spring Boot.AntifraudServiceApplication.executor&quot;: &quot;Run&quot;,
+    &quot;Spring Boot.TransactionServiceApplication.executor&quot;: &quot;Run&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;feature/implements-antifraud-flux&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/luis/IdeaProjects/app-java-codechallenge&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
+  <component name="RecentsManager">
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.devpull.antifraudservice.enums" />
+    </key>
+  </component>
   <component name="RunManager" selected="Spring Boot.TransactionServiceApplication">
     <configuration name="AntifraudServiceApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
       <option name="FRAME_DEACTIVATION_UPDATE_POLICY" value="UpdateClassesAndResources" />
@@ -167,7 +141,8 @@
       <updated>1769557517634</updated>
       <workItem from="1769557518653" duration="8540000" />
       <workItem from="1769630185778" duration="597000" />
-      <workItem from="1769689820003" duration="39880000" />
+      <workItem from="1769689820003" duration="52523000" />
+      <workItem from="1769845787336" duration="7562000" />
     </task>
     <servers />
   </component>

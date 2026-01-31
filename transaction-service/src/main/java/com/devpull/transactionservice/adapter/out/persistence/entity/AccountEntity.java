@@ -6,6 +6,8 @@ import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import org.springframework.data.annotation.Id;
+import org.springframework.data.annotation.Transient;
+import org.springframework.data.domain.Persistable;
 import org.springframework.data.relational.core.mapping.Column;
 import org.springframework.data.relational.core.mapping.Table;
 
@@ -16,7 +18,7 @@ import java.util.UUID;
 @AllArgsConstructor
 @Getter
 @Table(name = "accounts")
-public class AccountEntity {
+public class AccountEntity implements Persistable<UUID> {
 
     @Id
     private UUID id;
@@ -33,4 +35,20 @@ public class AccountEntity {
     @Column("updated_at")
     private Instant updatedAt;
 
+    @Transient
+    private boolean isNew;
+
+    public static AccountEntity newAccount(UUID id, AccountStatus status, AccountType type, Instant now) {
+        return new AccountEntity(id, status, type, now, now, true);
+    }
+
+    public AccountEntity markNotNew() {
+        this.isNew = false;
+        return this;
+    }
+
+    @Override
+    public boolean isNew() {
+        return isNew;
+    }
 }

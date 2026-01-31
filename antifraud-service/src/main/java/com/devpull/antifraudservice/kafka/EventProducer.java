@@ -1,12 +1,9 @@
 package com.devpull.antifraudservice.kafka;
 
-import com.devpull.transactionservice.domain.model.Transaction;
+import com.devpull.antifraudservice.dto.TransactionStatusChangedEvent;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.kafka.clients.admin.NewTopic;
 import org.springframework.kafka.core.KafkaTemplate;
-import org.springframework.kafka.support.KafkaHeaders;
-import org.springframework.messaging.Message;
-import org.springframework.messaging.support.MessageBuilder;
 import org.springframework.stereotype.Service;
 import tools.jackson.databind.ObjectMapper;
 
@@ -16,24 +13,24 @@ public class EventProducer {
 
     private final KafkaTemplate<String, byte[]> kafkaTemplate;
     private final ObjectMapper objectMapper;
-    private final NewTopic topic;
+    private final String topicName;
 
-    public EventProducer(
-            KafkaTemplate<String, byte[]> kafkaTemplate,
-            ObjectMapper objectMapper,
-            NewTopic topic
-    ) {
+    public EventProducer(KafkaTemplate<String, byte[]> kafkaTemplate,
+                         NewTopic topic,
+                         ObjectMapper objectMapper) {
         this.kafkaTemplate = kafkaTemplate;
         this.objectMapper = objectMapper;
-        this.topic = topic;
+        this.topicName = topic.name();
     }
 
-    public void sendMessage(Transaction transaction) {
+    public void sendMessage(TransactionStatusChangedEvent event) {
         try {
-            byte[] payload = objectMapper.writeValueAsBytes(transaction);
-            kafkaTemplate.send(topic.name(), payload);
+            byte[] payload = objectMapper.writeValueAsBytes(event);
+            kafkaTemplate.send(topicName, event.transactionId().toString(), payload);
+            log.info("[ANTIFRAUD] Sent status event txId={}, status={}", event.transactionId(), event.status());
         } catch (Exception e) {
-            log.error("Error serializing transaction event", e);
+            log.error("[ANTIFRAUD] Failed to serialize/send event", e);
+            throw new RuntimeException("Failed to produce event", e);
         }
     }
 

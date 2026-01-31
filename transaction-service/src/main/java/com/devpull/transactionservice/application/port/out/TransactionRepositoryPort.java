@@ -9,6 +9,8 @@ public interface TransactionRepositoryPort {
 
     Mono<Transaction> save(Transaction tx);
 
+    Mono<Transaction> update(Transaction tx);
+
     Mono<Transaction> findById(UUID id);
 
 }
